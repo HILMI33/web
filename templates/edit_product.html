@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+{% block title %}Edit Produk - The Pawon{% endblock %}
+
+{% block content %}
+<h2>Edit Wisata</h2>
+<form method="post">
+    <label for="name">Nama Wisata</label>
+    <input type="text" id="name" name="name" value="{{ product[1] }}" required>
+
+    <label for="description">Deskripsi</label>
+    <textarea id="description" name="description">{{ product[2] }}</textarea>
+
+    <label for="price">Harga</label>
+    <input type="number" id="price" name="price" step="0.01" value="{{ product[3] }}" required>
+
+    <label for="image">URL Gambar</label>
+    <input type="url" id="image" name="image" value="{{ product[4] }}">
+
+    
+
+    <button type="submit">Update Produk</button>
+</form>
+{% endblock %}

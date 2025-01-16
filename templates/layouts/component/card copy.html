@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-12 col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ product[4] }}" class="card-img-top" alt="product">
+                <div class="card-body">
+                  <h5 class="card-title">{{ product[1] }}</h5>
+                  <p class="card-text">{{ product[2] }}</p>
+                  <p>Harga: Rp{{ product[3] }}</p>
+                </div>
+              </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

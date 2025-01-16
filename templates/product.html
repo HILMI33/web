@@ -1,0 +1,16 @@
+{% extends 'layouts/base.html' %}
+{% block title %}Home - OLDFROM{% endblock %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 text-center">
+                <h2>Selamat Datang</h2>
+                <hr style="color: black;">
+            </div>
+            <a class="btn btn-success mb-3" href="/add">Tambah Wisata</a>
+        </div>
+    </div>
+</section>
+{% include 'layouts/component/card.html' %}
+{% endblock %}

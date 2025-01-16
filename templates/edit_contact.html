@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+{% block title %}Edit Kontak - OLDFROM{% endblock %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <h2>Edit Kontak</h2>
+        <form method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nama</label>
+                <input type="text" id="name" name="name" value="{{ contact[1] }}" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="whatsapp_number" class="form-label">Nomor WhatsApp</label>
+                <input type="text" id="whatsapp_number" name="whatsapp_number" value="{{ contact[2] }}" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Deskripsi</label>
+                <textarea id="description" name="description" class="form-control">{{ contact[3] }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

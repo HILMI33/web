@@ -1,0 +1,54 @@
+{% extends 'layouts/base.html' %}
+{% block title %}Home - OLDFROM{% endblock %}
+{% block content %}
+
+<section class="welcome-section">
+    <h2>Selamat Datang di OLDFROM</h2>
+    <p class="description">
+        Temukan keindahan dan pesona dunia dalam satu klik! Situs ini dirancang khusus untuk memberikan
+        Anda pengalaman terbaik dalam merencanakan perjalanan wisata, baik untuk liburan santai, petualangan seru,
+        hingga eksplorasi budaya yang mengesankan.
+        
+    </p>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h2>Menyediakan Destinasi</h2>
+            </div>
+            <hr style="color: black;">
+        </div>
+    </div>
+</section>
+    {% include 'layouts/component/card copy.html' %}
+
+    <section>
+        <div class="container">
+            <h2>Hubungi</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Nomor WhatsApp</th>
+                        <th>Deskripsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for contact in contacts %}
+                    <tr>
+                        <td>{{ contact[0] }}</td>
+                        <td>{{ contact[1] }}</td>
+                        <td>{{ contact[2] }}</td>
+                        <td>{{ contact[3] }}</td>
+                        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+{% endblock %}
